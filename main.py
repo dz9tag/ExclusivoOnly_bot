@@ -131,6 +131,12 @@ def echo_all(message):
         bot.reply_to(message, "💬 Para nosso conteúdo exclusivo, use /start\nDúvidas? Chame @JoaoGM")
 
 if __name__ == "__main__":
-    print("✅ BOT COMERCIAL INICIADO!")
+    print("BOT COMERCIAL INICIADO!")
     bot.remove_webhook()
-    bot.infinity_polling()
+
+    # Inicia o bot do Telegram em uma thread separada
+    from threading import Thread
+    Thread(target=bot.infinity_polling).start()
+
+    # Inicia o servidor Flask (ISSO CRIARA A URL)
+    app.run(host='0.0.0.0', port=8080)
