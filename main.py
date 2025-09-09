@@ -138,7 +138,8 @@ if __name__ == "__main__":
     from threading import Thread
 
     Thread(target=bot.infinity_polling).start()
-    
+
     # ✅ CORRETO: Usa a porta do Render
+    import os
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
