@@ -23,7 +23,7 @@ def send_welcome(message):
 • Atualizações diárias
 • Acesso vitalício
 
-💳 *VALOR PROMOCIONAL*: R$ 20,00
+💳 *VALOR PROMOCIONAL*: R$ 5,00
 📋 *Formas de pagamento*:
 ✅ PIX - Aprovação instantânea
 ✅ Cartão de Crédito
@@ -38,7 +38,7 @@ def send_welcome(message):
 📲 *COMO COMPRAR*:
 1️⃣ Clique no link abaixo
 2️⃣ Escolha a forma de pagamento
-3️⃣ Efetue o pagamento de R$ 20,00
+3️⃣ Efetue o pagamento de R$ 5,00
 4️⃣ Envie o comprovante para @JoaoGM
 
 🔗 *LINK DE COMPRA*:
@@ -53,7 +53,7 @@ def comprar_command(message):
     comprar_text = f"""
 💎 *QUERO ACESSO IMEDIATO!* 🚀
 
-💵 *Valor: R$ 20,00*
+💵 *Valor: R$ 5,00*
 📋 *Pagamento por*:
 • PIX (instantâneo)
 • Cartão de Crédito
@@ -85,7 +85,7 @@ def exclusivo_command(message):
 📸 *Foto exclusiva de prévia*:
 [Imagine aqui uma foto sensual]
 
-💵 *Valor promocional*: R$ 20,00
+💵 *Valor promocional*: R$ 5,00
 💎 *Acesso vitalício*
 
 📲 Use /comprar para acesso imediato!
@@ -98,7 +98,7 @@ def info_command(message):
     info_text = f"""
 📞 *INFORMAÇÕES*:
 
-💳 *Valor*: R$ 20,00
+💳 *Valor*: R$ 5,00
 📋 *Formas de pagamento*:
 • PIX (aprovacao instantânea)
 • Cartão de Crédito
@@ -126,7 +126,7 @@ def echo_all(message):
     if message.text.lower() in ['oi', 'ola', 'hello', 'hi']:
         bot.reply_to(message, "Olá! 😊 Use /start para ver nossos conteúdos exclusivos!")
     elif 'preco' in message.text.lower() or 'preço' in message.text.lower():
-        bot.reply_to(message, "💵 Valor: R$ 20,00\nUse /comprar para adquirir!")
+        bot.reply_to(message, "💵 Valor: R$ 5,00\nUse /comprar para adquirir!")
     else:
         bot.reply_to(message, "💬 Para nosso conteúdo exclusivo, use /start\nDúvidas? Chame @JoaoGM")
 
