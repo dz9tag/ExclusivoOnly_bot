@@ -1,3 +1,17 @@
+from threading import Thread
+import requests
+import time
+
+def keep_awake():
+    while True:
+        try:
+            requests.get("https://exclusivoonly-bot.onrender.com")
+            print("✅ Mantendo bot acordado")
+        except Exception as e:
+            print(f"⚠️ Erro no keep-alive: {e}")
+        time.sleep(240)  # 4 minutos
+
+Thread(target=keep_awake, daemon=True).start()
 import telebot
 from flask import Flask, request
 
