@@ -136,7 +136,9 @@ if __name__ == "__main__":
 
     # Inicia o bot do Telegram em uma thread separada
     from threading import Thread
-    Thread(target=bot.infinity_polling).start()
 
-    # Inicia o servidor Flask (ISSO CRIARA A URL)
-    app.run(host='0.0.0.0', port=8080)
+    Thread(target=bot.infinity_polling).start()
+    
+    # ✅ CORRETO: Usa a porta do Render
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
