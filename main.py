@@ -20,7 +20,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 app = Flask(__name__)
 
 # LINK DO SEU MERCADO PAGO
-LINK_MERCADO_PAGO = "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=d10708edb8d1460f8ae75fbbaa31d4d3"
+LINK_MERCADO_PAGO = https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=d10708edb8d1460f8ae75fbbaa31d4d3
 
 @app.route('/')
 def home():
