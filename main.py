@@ -55,8 +55,7 @@ def send_welcome(message):
 3️⃣ Efetue o pagamento de R$ 5,00
 4️⃣ Envie o comprovante para @JoaoGM
 
-🔗 *LINK DE COMPRA*:
-{LINK_MERCADO_PAGO}
+🔗 [CLIQUE AQUI PARA COMPRAR]({LINK_MERCADO_PAGO})
 
 💬 *DÚVIDAS?* Chame @JoaoGM
     """
@@ -74,8 +73,7 @@ def comprar_command(message):
 • Débito Bancário
 • Boleto
 
-🔗 *CLIQUE PARA COMPRAR*:
-{LINK_MERCADO_PAGO}
+🔗 [CLIQUE AQUI PARA COMPRAR]({LINK_MERCADO_PAGO})
 
 📞 *Após o pagamento*:
 • Envie o comprovante para @JoaoGM
@@ -87,7 +85,7 @@ def comprar_command(message):
 
 @bot.message_handler(commands=['exclusivo'])
 def exclusivo_command(message):
-    preview_text = """
+    preview_text = f"""
 🔞 *PRÉVIA DO CONTEÚDO EXCLUSIVO* 🎬
 
 🌸 *O que você vai encontrar*:
@@ -103,7 +101,7 @@ def exclusivo_command(message):
 💎 *Acesso vitalício*
 
 📲 Use /comprar para acesso imediato!
-🔗 Ou clique: "https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=f4d54a4e08a44cdca47f7422c7fd0c50"
+🔗 [CLIQUE AQUI PARA COMPRAR]({LINK_MERCADO_PAGO})
     """
     bot.send_message(message.chat.id, preview_text, parse_mode='Markdown')
 
@@ -122,7 +120,7 @@ def info_command(message):
 ⏰ *Liberação*: Imediata após comprovante
 👤 *Atendimento*: @JoaoGM
 
-🔗 *Link de compra*: {LINK_MERCADO_PAGO}
+🔗 [CLIQUE AQUI PARA COMPRAR]({LINK_MERCADO_PAGO})
 
 💬 Envie /comprar para ir direto ao link!
     """
@@ -130,7 +128,6 @@ def info_command(message):
 
 @bot.message_handler(commands=['previa'])
 def previa_command(message):
-    # Envia uma foto de prévia (adicione o link da imagem real)
     previa_text = "🔞 *PRÉVIA EXCLUSIVA* - Aqui vai uma amostra do conteúdo quente que você vai ter acesso! 🎯"
     bot.send_message(message.chat.id, previa_text, parse_mode='Markdown')
     # bot.send_photo(message.chat.id, "URL_DA_SUA_FOTO_AQUI", caption="📸 Foto exclusiva do conteúdo VIP")
